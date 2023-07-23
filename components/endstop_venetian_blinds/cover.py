@@ -17,8 +17,8 @@ from esphome.const import (
 CONF_TILT_DURATION = "tilt_duration"
 CONF_ACTUATOR_ACTIVATION_DURATION = "actuator_activation_duration"
 
-venetian_blinds_ns = cg.esphome_ns.namespace('venetian_blinds')
-VenetianBlinds = venetian_blinds_ns.class_('VenetianBlinds', cover.Cover, cg.Component)
+venetian_blinds_ns = cg.esphome_ns.namespace('endstop_venetian_blinds')
+VenetianBlinds = venetian_blinds_ns.class_('EndstopVenetianBlinds', cover.Cover, cg.Component)
 
 CONFIG_SCHEMA = cover.COVER_SCHEMA.extend({
     cv.GenerateID(): cv.declare_id(VenetianBlinds),
