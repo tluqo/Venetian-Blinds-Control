@@ -22,7 +22,7 @@ EndstopVenetianBlinds = venetian_blinds_ns.class_('EndstopVenetianBlinds', cover
 
 CONFIG_SCHEMA = cover.COVER_SCHEMA.extend({
     cv.GenerateID(): cv.declare_id(EndstopVenetianBlinds),
-    cv.Required(CONF_OPEN_ENDSTOP): cv.use_id(binary_sensor.BinarySensor),
+#    cv.Required(CONF_OPEN_ENDSTOP): cv.use_id(binary_sensor.BinarySensor),
     cv.Required(CONF_OPEN_ACTION): automation.validate_automation(single=True),
     cv.Required(CONF_OPEN_DURATION): cv.positive_time_period_milliseconds,
     cv.Required(CONF_CLOSE_ENDSTOP): cv.use_id(binary_sensor.BinarySensor),
