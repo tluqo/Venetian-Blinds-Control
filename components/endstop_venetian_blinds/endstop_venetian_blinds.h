@@ -1,7 +1,8 @@
 #pragma once
-#include "esphome/components/cover/cover.h"
-#include "esphome/core/automation.h"
 #include "esphome/core/component.h"
+#include "esphome/core/automation.h"
+#include "esphome/components/binary_sensor/binary_sensor.h"
+#include "esphome/components/cover/cover.h"
 
 namespace esphome {
 namespace endstop_venetian_blinds {

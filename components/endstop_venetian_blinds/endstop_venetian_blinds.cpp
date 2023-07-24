@@ -148,11 +148,11 @@ void EndstopVenetianBlinds::stop_prev_trigger_() {
 bool EndstopVenetianBlinds::is_at_target_() const {
   switch (this->current_operation) {
   case COVER_OPERATION_OPENING:
-    return this->exact_position_ >= this->target_position_ &&
-           this->exact_tilt_ >= this->target_tilt_ || this->is_open_();
+    return (this->exact_position_ >= this->target_position_ &&
+            this->exact_tilt_ >= this->target_tilt_) || this->is_open_();
   case COVER_OPERATION_CLOSING:
-    return this->exact_position_ <= this->target_position_ &&
-           this->exact_tilt_ <= this->target_tilt_ || this->is_closed_();
+    return (this->exact_position_ <= this->target_position_ &&
+            this->exact_tilt_ <= this->target_tilt_) || this->is_closed_();
   case COVER_OPERATION_IDLE:
   default:
     return true;
